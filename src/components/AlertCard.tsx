@@ -1,5 +1,5 @@
 import { Alert } from '../hooks/useWebSocket'
-import { AlertCircle, CheckCircle, AlertTriangle, Alert as AlertIcon } from 'lucide-react'
+import { AlertCircle, CheckCircle, AlertTriangle, Bell } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
 
 interface AlertCardProps {
@@ -15,7 +15,7 @@ export const AlertCard = ({ alert, onResolve }: AlertCardProps) => {
   }
 
   const severityIcons = {
-    LOW: <AlertIcon className="w-5 h-5 text-blue-600 dark:text-blue-400" />,
+    LOW: <Bell className="w-5 h-5 text-blue-600 dark:text-blue-400" />,
     MEDIUM: <AlertTriangle className="w-5 h-5 text-yellow-600 dark:text-yellow-400" />,
     CRITICAL: <AlertCircle className="w-5 h-5 text-red-600 dark:text-red-400" />,
   }
